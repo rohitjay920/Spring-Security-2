@@ -15,6 +15,13 @@ import com.project.service.UserService;
 public class CustomAuthenticationProvider implements AuthenticationProvider{
 	@Autowired
 	private UserService userService; 
+	
+	/*
+	 * Using a custom authentication providers as the passwords are not being encoded using password encoder. Hence a custom authentication
+	 * provider is designed to validate the user credentials
+	 */
+	
+	
 
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
